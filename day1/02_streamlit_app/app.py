@@ -11,7 +11,10 @@ import ui  # UIモジュール
 from config import MODEL_NAME
 
 # --- アプリケーション設定 ---
-st.set_page_config(page_title="Chat with Qwen", layout="wide")
+st.set_page_config(
+    page_title="Chat with Qwen",
+    layout="wide",
+)
 
 # --- 初期化処理 ---
 # NLTKデータのダウンロード（初回起動時など）
@@ -54,6 +57,9 @@ pipe = llm.load_model()
 st.title("🤖 Chat with Qwen")
 st.write(
     "Qwen 2.5 3Bを使用したチャットボットです。回答に対してフィードバックを行えます。"
+)
+st.markdown(
+    "[モデルの詳細はこちら](https://huggingface.co/dahara1/Qwen2.5-3B-Instruct-gguf-japanese-imatrix-128K)"
 )
 st.markdown("---")
 
